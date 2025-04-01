@@ -26,6 +26,7 @@ app.get('/tasks', (req, res) => {
 
 // Simulate Running a Task
 // Azure DevOps Pipeline Trigger
+// Self Hosted Agent
 app.post('/tasks/:id/run', async (req, res) => {
     const task = tasks.find(t => t.id == req.params.id);
     if (!task) return res.status(404).json({ message: 'Task not found' });

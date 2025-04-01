@@ -2,8 +2,8 @@ trigger:
   - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Default  # Make sure the self-hosted agent is part of this pool
 
 steps:
-  - script: echo "Running Task..."
-    displayName: 'Execute Task'
+  - script: echo "Hello, Azure DevOps!"
+    displayName: 'Run a simple script'

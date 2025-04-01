@@ -1,0 +1,9 @@
+trigger:
+  - main
+
+pool:
+  name: Default  # Make sure the self-hosted agent is part of this pool
+
+steps:
+  - script: echo "Hello, Azure DevOps!"
+    displayName: 'Run a simple script'

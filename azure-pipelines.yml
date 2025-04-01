@@ -2,8 +2,12 @@ trigger:
   - main
 
 pool:
-  name: Default  # Make sure the self-hosted agent is part of this pool
+  name: Default  # Ensure the self-hosted agent is part of this pool
 
 steps:
   - script: echo "Hello, Azure DevOps!"
     displayName: 'Run a simple script'
+
+  - task: buildandreleasetask@1
+    inputs:
+      samplestring: "Jeeva's Plugin"

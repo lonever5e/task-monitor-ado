@@ -1,13 +1,17 @@
-trigger:
-  - main
-
+trigger: none
+ 
+pr: none
+ 
 pool:
-  name: Default  # Ensure the self-hosted agent is part of this pool
-
+  vmImage: 'ubuntu-latest'
+ 
 steps:
-  - script: echo "Hello, Azure DevOps!"
-    displayName: 'Run a simple script'
-
-  - task: buildandreleasetask@1
+  - task: Bash@3
     inputs:
-      samplestring: "Jeeva's Plugin"
+      targetType: 'inline'
+      script: |
+        echo "Calling Kaiburr API..."
+        curl -X POST https://kc.kaiburr.com/api/v2/job/TestCaseGeneration/start \
+          -H "Authorization: Token $(KAIBURR_TOKEN)" \
+          -H "Content-Type: application/json" \
+          -d '[{"name": "issues", "value": "[]"}]'

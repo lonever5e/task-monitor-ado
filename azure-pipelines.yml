@@ -12,6 +12,6 @@ steps:
       script: |
         echo "Calling Kaiburr API..."
         curl -X POST https://kc.kaiburr.com/api/v2/job/TestCaseGeneration/start \
-          -H "Authorization: Token $(KAIBURR_TOKEN)" \
+          -H "Authorization: Token eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2NzFhNTAzYy02NzI2LTRjMDYtOGRlNi0wNDlkNzRiMGRjMjYifQ.eyJpYXQiOjE3NDQxMjc0NzQsImp0aSI6ImY3NGVjMDJhLTQ2YmYtNDZmYS1hZDBiLWNlMDQ4N2RkZmE2YiIsImlzcyI6Imh0dHBzOi8va2MtYXV0aC5rYWlidXJyLmNvbS9hdXRoL3JlYWxtcy9LYWlidXJyIiwiYXVkIjoiaHR0cHM6Ly9rYy1hdXRoLmthaWJ1cnIuY29tL2F1dGgvcmVhbG1zL0thaWJ1cnIiLCJzdWIiOiI2YjgxMDRlZC0zZTVlLTRkMWItYmM0ZS04NTc2MzU1Nzk2OGQiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoiS2FpYnVyciIsInNlc3Npb25fc3RhdGUiOiI2ODU2NTdlNy02ZjU3LTQ2NGUtODkyYS0wNDY2MWIwODBlOTMiLCJhdXRob3JpemF0aW9uIjp7InBlcm1pc3Npb25zIjpbeyJyc2lkIjoiMTg0MDVkMjMtYmU1NS00N2NjLTlhMDItMThiZWUzYzNmNmM1IiwicnNuYW1lIjoiRGVmYXVsdCBSZXNvdXJjZSJ9XX0sInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2ODU2NTdlNy02ZjU3LTQ2NGUtODkyYS0wNDY2MWIwODBlOTMifQ.XSEIT9vf65n7jMFZim1W4X-zYfEKdls6P7k52NwTYbDS-KvxGYiooxDur1ETsS0bpwWqpXC4iTh2EiKqE5UKEg" \
           -H "Content-Type: application/json" \
           -d '[{"name": "issues", "value": "[]"}]'
